@@ -2,7 +2,9 @@
   "name": "api",
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/server.ts"
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "NODE_ENV=production node dist/server.js"
   },
   "dependencies": {
     "@hono/node-server": "^1.19.6",
