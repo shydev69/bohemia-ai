@@ -29,6 +29,8 @@ import {
   IconUserEdit,
   IconUserX,
   IconX,
+  IconRobotFace,
+  IconList,
 } from "@tabler/icons-react";
 
 export type Icon = React.ComponentType<IconProps>;
@@ -53,6 +55,7 @@ export const Icons = {
   billing: IconCreditCard,
   ellipsis: IconDotsVertical,
   add: IconPlus,
+  plus: IconPlus,
   warning: IconAlertTriangle,
   user: IconUser,
   arrowRight: IconArrowRight,
@@ -63,4 +66,6 @@ export const Icons = {
   laptop: IconDeviceLaptop,
   twitter: IconBrandTwitter,
   check: IconCheck,
+  bot: IconRobotFace,
+  list: IconList,
 };
