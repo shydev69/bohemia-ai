@@ -56,7 +56,7 @@ export class AgentsAPI {
       limit?: number;
       search?: string;
       status?: "draft" | "active" | "inactive";
-      provider?: "cerebras" | "openai" | "anthropic" | "google" | "groq";
+      provider?: "openai";
     },
     authToken?: string
   ): Promise<AgentListResponse> {

@@ -8,14 +8,14 @@ export interface VoiceAgent {
   status: "draft" | "active" | "inactive";
 
   // LLM Configuration
-  llmProvider: "cerebras" | "openai" | "anthropic" | "google" | "groq";
+  llmProvider: "openai";
   llmModel: string;
   llmTemperature: number;
   llmMaxTokens: number;
   llmSettings?: Record<string, unknown>;
 
   // STT Configuration
-  sttProvider: "deepgram" | "assemblyai" | "speechmatics" | "soniox" | "openai";
+  sttProvider: "deepgram";
   sttModel: string;
   sttLanguage: string;
   sttSettings?: {
@@ -28,7 +28,7 @@ export interface VoiceAgent {
   };
 
   // TTS Configuration
-  ttsProvider: "elevenlabs" | "cartesia" | "openai" | "resemble" | "inworld";
+  ttsProvider: "elevenlabs";
   ttsVoice: string;
   ttsModel?: string;
   ttsSettings?: {
@@ -150,21 +150,16 @@ export interface CreateAgentRequest {
   name: string;
   description?: string;
   instructions: string;
-  llmProvider?: "cerebras" | "openai" | "anthropic" | "google" | "groq";
+  llmProvider?: "openai";
   llmModel: string;
   llmTemperature?: number;
   llmMaxTokens?: number;
   llmSettings?: Record<string, unknown>;
-  sttProvider?:
-    | "deepgram"
-    | "assemblyai"
-    | "speechmatics"
-    | "soniox"
-    | "openai";
+  sttProvider?: "deepgram";
   sttModel?: string;
   sttLanguage?: string;
   sttSettings?: object;
-  ttsProvider?: "elevenlabs" | "cartesia" | "openai" | "resemble" | "inworld";
+  ttsProvider?: "elevenlabs";
   ttsVoice: string;
   ttsModel?: string;
   ttsSettings?: object;
